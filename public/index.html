@@ -2,74 +2,166 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A passionate Android developer from Romania dedicated to creating innovative and impactful mobile applications.">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <title>Florin Stroe - Android Dev</title>
 
-  <title>Florin Stroe - Android Dev</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: 'Courier New', Courier, monospace;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-    section {
-      margin-bottom: 20px;
-    }
-  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div:gt(2)').each(function (i) {
+                $(this).hide().delay(i * 500).fadeIn(1000);
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(45, 45, 60);
+            color: white;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 40px;
+        }
+
+        .typewriter {
+            border-right: .15em solid orange;
+            animation: blink-caret 1s step-end infinite;
+            color: rgb(13, 133, 69);
+        }
+
+        .inline-div {
+            display: inline-block;
+        }
+
+        #hello-world {
+            font-size: 4.5vw;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            #hello-world {
+                font-size: 70px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #hello-world {
+                font-size: 7.5vw;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            0%,
+            100% {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+
+        a {
+            color: rgb(66, 162, 200);
+        }
+
+        #my-name {
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+
+        #description {
+            color: silver;
+            font-size: 23px;
+        }
+
+        #my-info-title {
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        #info-list {
+            font-size: 23px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            border: none;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
-  <div style="margin: 0 auto; width: 55%;">
-    <h1>Florin Stroe</h1>
-    <h2>Android Developer</h2>
-    <h3>About me</h3>
-  </div>
+    <div id="hello-world">
+        <div class="inline-div">print("</div>
+        <div id="typewriter" class="typewriter inline-div"></div>
+        <div class="inline-div">")</div>
+    </div>
 
-  <div style="margin: 0 auto; width: 55%; font-size: 21px;">
-    <section>
-      <div>
-        Hello, I'm Florin Stroe, an Android developer with a passion for creating innovative mobile apps. My
-        journey in the world of Android development started many years ago when I discovered the power of mobile
-        technology to solve everyday problems and make our lives easier.
-      </div>
-    </section>
-    <section>
-      <div>
-        Over the years, I've had the opportunity to work on a wide range of Android projects, from simple utility apps
-        to more complex solutions. I've developed expertise in a variety of programming languages, frameworks, and
-        tools, including Java, Kotlin, Android SDK, Firebase, and more.
-      </div>
-    </section>
-    <section>
-      <div>
-        One of my favorite aspects of Android development is the ability to bring my clients' ideas to life. I believe
-        that great apps start with a solid understanding of the client's needs and a collaborative approach to
-        development. That's why I make it a priority to work closely with my clients throughout the development process,
-        from initial brainstorming to final delivery.
-      </div>
-    </section>
-    <section>
-      <div>
-        My goal as an Android developer is to create apps that not only look great, but also provide a seamless and
-        intuitive user experience. I strive to stay up-to-date with the latest trends and best practices in mobile app
-        development, and I'm always exploring new tools and frameworks to enhance my skills.
-      </div>
-    </section>
-    <section>
-      <div>
-        When I'm not coding, you can find me reading about the latest tech news or exploring the great outdoors. I'm
-        also
-        a
-        big fan of podcasts and love discovering new shows to listen to.
-      </div>
-    </section>
-    <section>
-      <div>
-        Thank you for visiting my portfolio website, and I look forward to the opportunity to work with you on your next
-        Android development project!
-      </div>
-    </section>
-  </div>
+    <div id="my-name">My name is <strong>Florin Stroe</strong>.</div>
 
+    <div id="description">This is my website! I am an Android developer from Romania with a passion for creating
+        innovative mobile apps.</div>
+
+    <div id="my-info-title">My info:</div>
+
+    <div id="info-list">
+        <ul>
+            <li>E-Mail Address: <a href="mailto:florin@stroe.dev">florin@stroe.dev</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/stroeflorin/">@StroeFlorin</a></li>
+            <li>Github: <a href="https://github.com/StroeFlorin">@StroeFlorin</a></li>
+            <li><a href="">Download my resume/CV</a></li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+    <script>
+        var str = "Hello wolrd";
+        var correctStr = "Hello world!";
+        var i = 0;
+        var speed = 160;
+
+        function typeWriter() {
+            if (i < str.length) {
+                document.getElementById("typewriter").innerHTML += str.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else if (str !== correctStr) {
+                speed = 280
+                eraseAndCorrect();
+            }
+        }
+
+        function eraseAndCorrect() {
+            var currentText = document.getElementById("typewriter").innerHTML;
+            if (currentText !== "Hello wo") {
+                document.getElementById("typewriter").innerHTML = currentText.slice(0, -1);
+                setTimeout(eraseAndCorrect, speed);
+            } else {
+                str = correctStr;
+                i = currentText.length;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
 </body>
+
 </html>
