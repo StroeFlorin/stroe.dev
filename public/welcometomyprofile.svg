@@ -1,0 +1,20 @@
+<svg viewBox="0 0 250 20" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- The clipPath contains a rectangle whose width grows from 0 to 250 over 6 seconds -->
+    <clipPath id="clipText">
+      <rect x="0" y="0" width="0" height="20">
+        <animate attributeName="width"
+                 from="0" to="250"
+                 begin="0s" dur="6s"
+                 fill="freeze" />
+      </rect>
+    </clipPath>
+  </defs>
+  <!-- The text element uses the clipPath so that it appears to be typed out -->
+  <text x="0" y="10"
+        font-family="monospace"
+        font-size="7"
+        clip-path="url(#clipText)">
+    <tspan fill="silver">print(</tspan><tspan fill="green">"Welcome to my profile!"</tspan><tspan fill="silver">)</tspan>
+  </text>
+</svg>

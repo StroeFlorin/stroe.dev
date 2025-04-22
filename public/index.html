@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="A passionate Android developer from Romania dedicated to creating innovative and impactful mobile applications.">
+        content="Software developer from Romania dedicated to creating innovative and impactful applications.">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <title>Florin Stroe - Android Dev</title>
+    <title>Florin Stroe</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('div:gt(2)').each(function (i) {
-                $(this).hide().delay(i * 500).fadeIn(1000);
-            });
-        });
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        html {
+            scroll-behavior: smooth; 
+        }
+
         body {
             background-color: rgb(45, 45, 60);
             color: white;
@@ -36,9 +33,9 @@
         }
 
         .typewriter {
-            border-right: .15em solid orange;
+            border-right: .15em solid orange; 
             animation: blink-caret 1s step-end infinite;
-            color: rgb(13, 133, 69);
+            color: lime; 
         }
 
         .inline-div {
@@ -46,41 +43,36 @@
         }
 
         #hello-world {
-            font-size: 4.5vw;
+            font-size: clamp(2.5rem, 7.5vw, 4.5rem); 
             margin-bottom: 50px;
         }
 
-        @media screen and (min-width: 1024px) {
-            #hello-world {
-                font-size: 70px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            #hello-world {
-                font-size: 7.5vw;
-            }
-        }
-
         @keyframes blink-caret {
-
             0%,
             100% {
                 border-color: transparent
             }
 
             50% {
-                border-color: orange;
+                border-color: orange; 
             }
         }
 
         a {
             color: rgb(66, 162, 200);
+            text-decoration: none; 
+        }
+
+        a:hover {
+            color: rgb(86, 182, 220); 
         }
 
         #my-name {
-            font-size: 35px;
-            margin-bottom: 5px;
+            font-size: 2.5rem; 
+            font-weight: 700;
+            color: lime;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 0.5rem;
         }
 
         #description {
@@ -104,34 +96,213 @@
             border: none;
             margin: 10px 0;
         }
+
+        .hero {
+            background: linear-gradient(135deg, #0d8545, #42a2c8);
+            color: #fff;
+        }
+
+        #about .about-content {
+            padding: 0.5rem; 
+            border-radius: 0.5rem;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: left; 
+        }
+
+        @media (min-width: 768px) { 
+            #about .about-content {
+                flex-direction: row; 
+                align-items: flex-start; 
+                padding: 2rem; 
+            }
+            #about .about-text {
+                margin-left: 2rem; 
+            }
+        }
+
+        #about img {
+            max-width: 200px; 
+            height: 200px; 
+            object-fit: cover; 
+            border: 5px solid lime;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 50%; 
+            margin-bottom: 1rem; 
+        }
+
+        @media (min-width: 768px) {
+            #about img {
+                margin-bottom: 0; 
+                flex-shrink: 0; 
+            }
+        }
+
+        .navbar-nav .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.05); 
+            border: none; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            color: white; 
+        }
+
+        .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+        }
+
+        .card-title {
+            color: lime; 
+        }
+
+        .card-body a {
+             color: rgb(66, 162, 200); 
+        }
+         .card-body a:hover {
+             color: rgb(86, 182, 220);
+         }
+
+        .card .btn-primary {
+            background-color: lime;
+            border-color: lime;
+            color: #333; 
+            font-weight: 600;
+        }
+        .card .btn-primary:hover {
+            background-color: #adff2f; 
+            border-color: #adff2f;
+            color: #000;
+        }
+
+        #info .card-body i {
+            font-size: 1.5rem; 
+            margin-bottom: 0.5rem; 
+            color: lime; 
+        }
+
+        footer {
+            margin-top: 50px; 
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="hello-world">
-        <div class="inline-div">print("</div>
-        <div id="typewriter" class="typewriter inline-div"></div>
-        <div class="inline-div">")</div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#info">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div id="my-name">My name is <strong>Florin Stroe</strong>.</div>
+    <header class="hero text-center py-5 mb-5">
+        <div class="container">
+            <h1 id="hello-world" class="display-3 fw-bold mb-3" data-aos="fade-down">
+                <span class="me-1">print("</span>
+                <span id="typewriter" class="typewriter"></span>
+                <span class="ms-1">")</span>
+            </h1>
+        </div>
+    </header>
 
-    <div id="description">This is my website! I am an Android developer from Romania with a passion for creating
-        innovative mobile apps.</div>
+    <section id="about" class="container mb-5">
+        <div class="row"> 
+            <div class="col-12" data-aos="fade-right"> 
+                <div class="about-content">
+                    <img src="me.jpg" alt="Florin" class="img-fluid">
+                    <div class="about-text">
+                        <h2 id="my-name">My name is <strong>Florin Stroe</strong>.</h2>
+                        <p id="description">
+                            I am a passionate software developer based in Romania, dedicated to crafting efficient, scalable desktop and mobile applications that solve real-world problems. I enjoy learning new technologies, collaborating on open‑source projects, and continuously improving my coding skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id="my-info-title">My info:</div>
+    <section id="projects" class="container mb-5" data-aos="fade-up">
+        <h3 class="mb-4">Projects</h3>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="project1.png" class="card-img-top" alt="Test Project">
+                    <div class="card-body">
+                        <h5 class="card-title">FloreonBOT</h5>
+                        <p class="card-text">FloreonBOT is an open-source Telegram Bot written in Java with Spring.</p>
+                        <a href="https://github.com/StroeFlorin/floreonbot" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id="info-list">
-        <ul>
-            <li>E-Mail Address: <a href="mailto:florin@stroe.dev">florin@stroe.dev</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/stroeflorin/">@StroeFlorin</a></li>
-            <li>Github: <a href="https://github.com/StroeFlorin">@StroeFlorin</a></li>
-            <li><a href="">Download my resume/CV</a></li>
-        </ul>
-    </div>
+    <section id="info" class="container mb-5" data-aos="fade-up">
+        <h3 class="mb-4">Get in touch</h3>
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-envelope"></i> 
+                        <h5 class="card-title">Email</h5>
+                        <p><a href="mailto:florin@stroe.dev">florin@stroe.dev</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fab fa-linkedin"></i> 
+                        <h5 class="card-title">LinkedIn</h5>
+                        <p><a href="https://www.linkedin.com/in/stroeflorin/" target="_blank" rel="noopener noreferrer">@StroeFlorin</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fab fa-github"></i> 
+                        <h5 class="card-title">GitHub</h5>
+                        <p><a href="https://github.com/StroeFlorin" target="_blank" rel="noopener noreferrer">@StroeFlorin</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-file-alt"></i> 
+                        <h5 class="card-title">Résumé</h5>
+                        <p><a href="#">Download CV</a></p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="divider"></div>
+    <footer class="bg-dark text-white text-center py-3">
+        <small>&copy; <span id="copyright-year">2024</span> Florin Stroe. All rights reserved.</small> 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ once: true });
+
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
         var str = "Hello wolrd";
         var correctStr = "Hello world!";
         var i = 0;
@@ -163,5 +334,4 @@
         typeWriter();
     </script>
 </body>
-
 </html>
